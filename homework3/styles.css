@@ -1,0 +1,131 @@
+.container{
+    display: grid;
+    grid-template-rows: 200px 10fr;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer"
+    ;
+
+    background-color: rgb(124, 191, 235);
+
+    gap: 10px;
+}
+
+div {
+    background-color: rgb(246, 232, 150);
+    border: 2px solid black;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+}
+
+.header{
+    grid-area: header;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+.main-content{
+    grid-area: main;
+    background-color: rgb(246, 232, 150);
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px
+}
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px;
+    gap: 30px;
+}
+
+.intro{
+    background-color: rgb(124, 191, 235);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.skills{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+    display: grid;
+    
+}
+
+.pics {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(124, 191, 235);
+    border: 0;
+}
+
+.experience{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    
+}
+
+.labels{
+    background-color: rgb(124, 191, 235);
+    border-radius: 20px;
+}
+
+.info {
+    background-color: rgba(124, 191, 235, 0);
+    border: 0;
+}
+
+button {
+    background-color: rgb(124, 191, 235);
+    border-radius: 20px;
+    border-color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: rgb(19, 94, 144);
+    color: white;
+    cursor: pointer;
+}
