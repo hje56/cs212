@@ -1,0 +1,197 @@
+
+
+.container{
+    display: grid;
+    grid-template-rows: 200px 10fr;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer"
+    ;
+
+    background-color: rgb(124, 191, 235);
+
+    gap: 10px;
+}
+
+
+
+div {
+    background-color: rgb(246, 232, 150);
+    border: 2px solid black;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+}
+
+.header{
+    grid-area: header;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+.main-content{
+    grid-area: main;
+    background-color: rgb(246, 232, 150);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 3fr 5fr 2fr;
+    gap: 5px
+}
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px;
+    gap: 30px;
+}
+
+.intro{
+    background-color: rgb(124, 191, 235);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.skills {
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.skills div {
+    background-color: rgb(124, 191, 235);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 30px 75px;
+    border-radius: 30px;
+    transition: transform 0.2s ease, background-color 0.5s ease;
+}
+
+.skills li {
+    transform: scale(125%);
+    transition: transform 0.2s ease;
+}
+
+.skills div:hover li {
+    transform: rotate(3deg) scale(140%);
+}
+
+.skills div:hover {
+    transform: scale(130%);
+    background-color: rgb(75, 162, 219);
+}
+
+.projects{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+    display: grid;
+}
+
+.pics {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(124, 191, 235);
+    border: 0;
+}
+
+.pics img {
+    opacity: 75%;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pics img:hover {
+    transform: scale(120%) translateY(25px);
+    opacity: 100%;
+}
+
+.experience{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    background-color: rgb(124, 191, 235);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    
+}
+
+.labels{
+    background-color: rgb(124, 191, 235);
+    border-radius: 20px;
+}
+
+.info {
+    background-color: rgba(124, 191, 235, 0);
+    border: 0;
+}
+
+button {
+    background-color: rgb(124, 191, 235);
+    border-radius: 20px;
+    border-color: black;
+    font-size: 18px;
+    padding: 10px;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(19, 94, 144);
+    color: white;
+    cursor: pointer;
+    transform: scale(110%);
+    box-shadow: -3px 3px 5px 0px rgb(10, 33, 48);
+}
+
+@media (max-width: 480px) {
+    .container, .container div {
+        display: block;
+    }
+
+    .skills div {
+        transform: translateX(-25px);
+    }
+
+    .pics img:hover {
+        transform: scale(120%);
+        opacity: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .container, .container div {
+        display: inline-block;
+    }
+}
